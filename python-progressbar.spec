@@ -4,7 +4,7 @@
 
 Name:           python-%{realname}
 Version:        2.2
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Text progressbar library for python
 
 Group:          Development/Libraries
@@ -49,6 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/*
 
 %changelog
+* Thu Feb 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.2-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
 * Thu Jan 8 2009 Christof Damian <christof@damian.net> 2.2-5
 - don't include sitelib in files 
 
