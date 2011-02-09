@@ -4,7 +4,7 @@
 
 Name:           python-%{realname}
 Version:        2.2
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Text progressbar library for python
 
 Group:          Development/Libraries
@@ -49,6 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/*
 
 %changelog
+* Tue Feb 08 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.2-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Thu Jul 22 2010 David Malcolm <dmalcolm@redhat.com> - 2.2-8
 - Rebuilt for https://fedoraproject.org/wiki/Features/Python_2.7/MassRebuild
 
