@@ -4,13 +4,15 @@
 
 Name:           python-%{realname}
 Version:        2.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Text progressbar library for python
 
 Group:          Development/Libraries
 License:        LGPLv2+ 
 URL:            http://code.google.com/p/%{name}/
-Source0:        http://%{name}.googlecode.com/files/%{realname}-%{version}.tar.gz
+Source0:        https://%{name}.googlecode.com/files/%{realname}-%{version}.tar.gz
+Patch0:         progressbar-interrupt.patch
+
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  python-devel
@@ -29,10 +31,10 @@ automatically supports features like auto-re-sizing when available.
 %prep
 %setup -q -n %{realname}-%{version}
 
+%patch0 -p1 -b .interrupt
 
 %build
 %{__python} setup.py build
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/*
 
 %changelog
+* Sat May 25 2013 Christof Damian <christof@damian.net> - 2.3-2
+- added interrupt patch bug #965919
+
 * Sat Apr 27 2013 Christof Damian <christof@damian.net> - 2.3-1
 - upstream 2.3
 
