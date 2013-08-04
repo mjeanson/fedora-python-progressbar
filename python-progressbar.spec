@@ -4,7 +4,7 @@
 
 Name:           python-%{realname}
 Version:        2.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Text progressbar library for python
 
 Group:          Development/Libraries
@@ -51,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/*
 
 %changelog
+* Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.3-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Sat May 25 2013 Christof Damian <christof@damian.net> - 2.3-2
 - added interrupt patch bug #965919
 
